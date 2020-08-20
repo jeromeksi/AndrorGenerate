@@ -2,9 +2,7 @@ package com.example.andor.Model;
 
 import com.example.andor.Enum.TypeMonster;
 
-import java.io.Serializable;
-
-public class Monster implements Serializable {
+public class Monster {
     public TypeMonster type;
     public int pos=-1;
     public String specialite;

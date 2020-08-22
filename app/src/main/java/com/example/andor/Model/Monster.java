@@ -1,8 +1,13 @@
 package com.example.andor.Model;
 
 import com.example.andor.Enum.TypeMonster;
+import com.example.andor.R;
 
-public class Monster {
+import java.io.Serializable;
+
+import static android.provider.Settings.System.getString;
+
+public class Monster implements Serializable {
     public TypeMonster type;
     public int pos=-1;
     public String specialite;
@@ -22,9 +27,12 @@ public class Monster {
         this.pos = pos;
         this.specialite =spec;
     }
-    public String GetDescription()
+
+    @Override
+    public String toString()
     {
-        String desc = "Placez un "+ type;
+        String desc = "Placez un"+ type;
+
         if(pos != -1)
             desc += " sur la case "+pos;
         else

@@ -80,7 +80,7 @@ public class GenerateLegend {
             secStart.listMonster[0] = new Monster(TypeMonster.Troll); //Un troll
             i++;
         }
-        for(;i<nbMonster-2;i++)
+        for(;i<nbMonster;i++)
         {
             //skrall ou gor
             switch(ThreadLocalRandom.current().nextInt(1, 2+ 1))

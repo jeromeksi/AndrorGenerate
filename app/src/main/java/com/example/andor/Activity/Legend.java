@@ -40,6 +40,12 @@ public class Legend extends AppCompatActivity  implements MyAdapter.ItemClickLis
 
     @Override
     public void onItemClick(View view, int position) {
-        Toast.makeText(this, this.mAdapter.getSection(position).name, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, this.mAdapter.getSection(position).name, Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(Legend.this,Card.class);
+
+
+        intent.putExtra("Section",this.mAdapter.getSection(position));
+
+        startActivity(intent);
     }
 }

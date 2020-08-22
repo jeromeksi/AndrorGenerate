@@ -39,5 +39,10 @@ public class Card extends AppCompatActivity {
             textMonster += "\n" + section.listMonster[i].toString();
         }
         tvMonster.setText(textMonster);
+
+
+        TextView tvPlayer =  findViewById(R.id.tvPlayer);
+        tvPlayer.setText(section.player);
+
     }
 }

@@ -31,15 +31,15 @@ public class Monster implements Serializable {
     @Override
     public String toString()
     {
-        String desc = "Placez un"+ type;
+        String desc = "Placez un " + type;
 
         if(pos != -1)
-            desc += " sur la case "+pos;
+            desc += " sur la case " + pos;
         else
-            desc += " choisir la position avec deux dé (rouge : dizaine, dé joueur: unité) ";
+            desc += ", choisir la position avec deux dés ";
 
         if(specialite != null)
-            desc+= " (Règle : "+specialite+")";
+            desc+= " (Règle : " + specialite+")";
         return  desc;
     }
 }

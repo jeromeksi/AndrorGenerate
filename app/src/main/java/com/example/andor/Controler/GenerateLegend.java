@@ -1,5 +1,6 @@
 package com.example.andor.Controler;
 
+import com.example.andor.Enum.PlacementPlayer;
 import com.example.andor.Enum.TypeMonster;
 import com.example.andor.Model.DataLegend;
 import com.example.andor.Model.Monster;
@@ -77,7 +78,7 @@ public class GenerateLegend {
         int i = 0;
         if(difficute>6)
         {
-            secStart.listMonster[0] = new Monster(TypeMonster.Troll); //Un troll
+            secStart.listMonster[0] = new Monster(TypeMonster.Troll,34); //Un troll
             i++;
         }
         for(;i<nbMonster;i++)
@@ -95,6 +96,18 @@ public class GenerateLegend {
         }
         //Placer Joueur
 
+        switch (ThreadLocalRandom.current().nextInt(1, 3 + 1))
+        {
+            case 1:
+                secStart.player = PlacementPlayer.DICE.getString();
+                break;
+            case 2:
+                secStart.player = PlacementPlayer.ZERO.getString();
+                break;
+            case 3:
+                secStart.player = PlacementPlayer.RANK.getString();
+                break;
+        }
         //Objectif
 
 

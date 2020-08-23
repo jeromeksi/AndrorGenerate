@@ -84,27 +84,36 @@ public class GenerateLegend {
         for(;i<nbMonster;i++)
         {
             //skrall ou gor
-            switch(ThreadLocalRandom.current().nextInt(1, 2+ 1))
+            switch(ThreadLocalRandom.current().nextInt(1, 3+ 1))
             {
-                case 1:
+                case 1: case 2:
                     secStart.listMonster[i] = new Monster(TypeMonster.Gor);
                     break;
-                case 2:
+                case 3:
                     secStart.listMonster[i] = new Monster(TypeMonster.Skrall);
                     break;
             }
         }
         //Placer Joueur
 
-        switch (ThreadLocalRandom.current().nextInt(1, 3 + 1))
+        switch (ThreadLocalRandom.current().nextInt(1, 6 + 1))
         {
             case 1:
                 secStart.player = PlacementPlayer.DICE.getString();
                 break;
             case 2:
-                secStart.player = PlacementPlayer.ZERO.getString();
+                secStart.player = PlacementPlayer.CASTLE.getString();
                 break;
             case 3:
+                secStart.player = PlacementPlayer.MINE.getString();
+                break;
+            case 4:
+                secStart.player = PlacementPlayer.FOREST.getString();
+                break;
+            case 5:
+                secStart.player = PlacementPlayer.CHOICE.getString();
+                break;
+            case 6:
                 secStart.player = PlacementPlayer.RANK.getString();
                 break;
         }
